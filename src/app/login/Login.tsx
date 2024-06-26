@@ -16,6 +16,7 @@ const Login = () => {
     try {
       setLoading(true);
       // Logic to handle API Calls
+
       // const isEmail = user.email.includes("@");
       // const userData = isEmail
       //   ? { email: user.email, password: user.password }

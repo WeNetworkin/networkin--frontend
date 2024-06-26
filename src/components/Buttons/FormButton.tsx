@@ -1,10 +1,4 @@
-interface FormButtonProps {
-  text: String;
-  handler: () => void;
-  style: String;
-  isDisabled: boolean;
-}
-
+import { FormButtonProps } from "../../types/interfaces/Buttons";
 const FormButton = ({ text, handler, style, isDisabled }: FormButtonProps) => {
   return (
     <button

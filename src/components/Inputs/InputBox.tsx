@@ -1,9 +1,4 @@
-interface InputBoxProps {
-  placeholder: string;
-  image: string;
-  value: string;
-  changeHandler: (e: any) => void;
-}
+import { InputBoxProps } from "../../types/interfaces/Inputs";
 const InputBox = ({
   placeholder,
   image,
