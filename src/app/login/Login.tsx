@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import FormButton from "../../components/Buttons/FormButton";
-import {
-  login_button_style,
-  register_button_style,
-} from "../../components/styles";
+import { login_button_style } from "../../components/styles";
 import InputBox from "../../components/Inputs/InputBox";
 import { password, userIcon } from "../../assets/exportAssets";
 
@@ -18,10 +15,11 @@ const Login = () => {
   const handleClick = async () => {
     try {
       setLoading(true);
-      const isEmail = user.email.includes("@");
-      const userData = isEmail
-        ? { email: user.email, password: user.password }
-        : { username: user.email, password: user.password };
+      // Logic to handle API Calls
+      // const isEmail = user.email.includes("@");
+      // const userData = isEmail
+      //   ? { email: user.email, password: user.password }
+      //   : { username: user.email, password: user.password };
       //   const response = await axios.post("apiPath", userData);
       //   console.log("User logged in ", response);
       setLoading(false);

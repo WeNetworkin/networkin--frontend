@@ -1,11 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import FormButton from "../../components/Buttons/FormButton";
-import {
-  login_button_style,
-  register_button_style,
-} from "../../components/styles";
-import { email, password, userIcon } from "../../assets/exportAssets";
+import { register_button_style } from "../../components/styles";
+import { email, password, upload, userIcon } from "../../assets/exportAssets";
 import InputBox from "../../components/Inputs/InputBox";
 
 const Register = () => {
@@ -61,6 +58,12 @@ const Register = () => {
           changeHandler={(e: any) =>
             setUser({ ...user, password: e.target.value })
           }
+        />
+        <InputBox
+          placeholder="upload resume..."
+          image={upload}
+          value={""}
+          changeHandler={(e: any) => console.log("handle")}
         />
         <FormButton
           text={"Register"}

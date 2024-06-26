@@ -1,5 +1,3 @@
-import { SVGProps } from "react";
-
 interface InputBoxProps {
   placeholder: string;
   image: string;
@@ -21,7 +19,7 @@ const InputBox = ({
         value={value}
         onChange={changeHandler}
       />
-      <img src={image} alt="icon" className="pb-1" />
+      <img src={image} alt="icon" className="pb-2" />
     </div>
   );
 };
