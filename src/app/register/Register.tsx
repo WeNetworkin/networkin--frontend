@@ -32,45 +32,58 @@ const Register = () => {
   }, [user]);
   console.log(user);
   return (
-    <div>
-      <div className="flex flex-col items-center mt-[40vh]">
-        <h1 className="text-white">{loading ? "Loading..." : "Register"}</h1>
-        <InputBox
-          placeholder="username..."
-          image={userIcon}
-          value={user.username}
-          changeHandler={(e: any) =>
-            setUser({ ...user, username: e.target.value })
-          }
-        />
-        <InputBox
-          placeholder="email..."
-          image={email}
-          value={user.email}
-          changeHandler={(e: any) =>
-            setUser({ ...user, email: e.target.value })
-          }
-        />
-        <InputBox
-          placeholder="password..."
-          image={password}
-          value={user.password}
-          changeHandler={(e: any) =>
-            setUser({ ...user, password: e.target.value })
-          }
-        />
-        <InputBox
-          placeholder="upload resume..."
-          image={upload}
-          value={""}
-          changeHandler={(e: any) => console.log("handle")}
-        />
-        <FormButton
-          text={"Register"}
-          handler={handleClick}
-          style={register_button_style}
-          isDisabled={disabled}
-        />
+    <div className="flex flex-col gap-12 items-center justify-center h-full w-full">
+      <h1 className="text-white font-thin text-4xl">
+        {loading ? "Loading..." : "lets get started"}
+      </h1>
+      <div className="w-max h-max p-20 border border-[#ECB365] rounded-3xl">
+        <div className="flex flex-col gap-6 items-center">
+          <div className="flex flex-col gap-20 items-center">
+            <div className="flex flex-col gap-4 items-center mt-10">
+              <InputBox
+                placeholder="username..."
+                image={userIcon}
+                value={user.username}
+                changeHandler={(e: any) =>
+                  setUser({ ...user, username: e.target.value })
+                }
+              />
+              <InputBox
+                placeholder="email..."
+                image={email}
+                value={user.email}
+                changeHandler={(e: any) =>
+                  setUser({ ...user, email: e.target.value })
+                }
+              />
+              <InputBox
+                placeholder="password..."
+                image={password}
+                value={user.password}
+                changeHandler={(e: any) =>
+                  setUser({ ...user, password: e.target.value })
+                }
+              />
+              <InputBox
+                placeholder="upload resume..."
+                image={upload}
+                value={""}
+                changeHandler={(e: any) => console.log("handle")}
+              />
+            </div>
+            <FormButton
+              text={"Login"}
+              handler={handleClick}
+              style={register_button_style}
+              isDisabled={disabled}
+            />
+          </div>
+          <>
+            <span className="text-xs font-medium">
+              Already Networkin'? <span className="text-[#F1C78E]">Login</span>
+            </span>
+          </>
+        </div>
       </div>
     </div>
   );
