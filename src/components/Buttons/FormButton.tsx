@@ -3,7 +3,7 @@ const FormButton = ({ text, handler, style, isDisabled }: FormButtonProps) => {
   return (
     <button
       onClick={handler}
-      className={`w-max m-3 px-3 py-1 text-base font-medium rounded-lg  ${style} ${
+      className={`${style} ${
         isDisabled ? "cursor-not-allowed" : "cursor-pointer"
       }`}
       type="submit"
