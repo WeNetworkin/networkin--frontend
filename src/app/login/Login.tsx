@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import FormButton from "../../components/Buttons/FormButton";
-import {
-  login_button_style,
-  register_button_style,
-} from "../../components/styles";
+import { register_button_style } from "../../components/styles";
 import InputBox from "../../components/Inputs/InputBox";
 import { password, userIcon } from "../../assets/exportAssets";
 
