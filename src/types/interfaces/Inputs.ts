@@ -4,3 +4,4 @@ export interface InputBoxProps {
   value: string;
   changeHandler: (e: any) => void;
 }
+
